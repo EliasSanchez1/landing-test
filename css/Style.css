@@ -3,10 +3,11 @@
         margin: 0;
         padding: 0;
         color: white;
-        font-family: 'Shadows Into Light', cursive;
+        font-family: 'Roboto Mono', monospace;
     }
     
     header::after {
+        margin-top: 11vh;
         content: "";
         height: 100vh;
         width: 100%;
@@ -71,10 +72,31 @@
         grid-gap: 50px;
     }
     
+    .colom-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+    
+    .colom-2,
+    .text-gb {
+        text-align: right;
+    }
+    
+    .colom-2,
+    h3 {
+        text-align: center;
+    }
+    
     .grid-2 {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 20px;
+    }
+    
+    .grid-2,
+    .animacion {
+        text-align: left;
     }
     
     .text-center {
@@ -121,7 +143,8 @@
             display: none;
         }
         .grid-3,
-        .grid-2 {
+        .grid-2,
+        .colom-2 {
             grid-template-columns: 1fr;
         }
         .services {

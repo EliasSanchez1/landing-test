@@ -18,15 +18,15 @@
 
 <body>
     <!--Navegacion-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <a class="navbar-brand" href="#header">DATANET</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+            <span class="navbar-toggler-icon"></span>
+            </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
                 <a class="nav-item nav-link active" href="#Servicios">Home</a>
-                <a class="nav-item nav-link" href="#">Features</a>
+                <a class="nav-item nav-link" href="#Servicios1">Features</a>
             </div>
         </div>
     </nav>
@@ -40,7 +40,7 @@
         </div>
     </header>
     <!-- services -->
-    <section class="services text-center">
+    <section class="services text-center" id="Servicios1">
         <h3 class="title">Services</h3>
         <div class="container grid-3">
             <div>
@@ -59,15 +59,21 @@
     <!-- ABOUT -->
     <section class="about bg-light">
         <div class="container text-center">
-            <div class=" grid-2">
+            <div class="grid-2">
                 <div class="center">
                     <div class="bgsize">
                         <img src="imagen/Cableado-Estructurado.jpg" style="width: 80%;">
                     </div>
                 </div>
-                <div id="Servicios">
-                    <h3>Ubicacion</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat unde tempore consectetur modi iste nemo!</p>
+                <div>
+                    <div id="Servicios">
+                        <div class="animacion">
+                            <h1 class="display-4">Cableado Estructurado</h1>
+                            <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit aspernatur quisquam impedit voluptate aperiam iure expedita? Alias distinctio possimus sapiente? ipsum, dolor sit amet consectetur adipisicing elit. Repellat
+                                unde tempore consectetur modi iste nemo!</p>
+                        </div>
+                        <a href="#Servicios" class="btn btn-outline-secondary bt-lg mt-2 heber-btn">Read More</a>
+                    </div>
                 </div>
             </div>
     </section>
@@ -75,10 +81,12 @@
     <!-- ABOUT TWO -->
     <section class="about bg-dark">
         <div class="container text-center">
-            <div class="grid-2">
-                <div>
-                    <h3>Ubicacion</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti, voluptas! Velit suscipit, totam fugit architecto quaerat dolorum sapiente harum ad.</p>
+            <div class="colom-2">
+                <div class="text-gb">
+                    <h3 class="display-4">Control Acceso</h3>
+                    <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit pariatur velit temporibus fuga molestiae ab laudantium deleniti distinctio, perferendis voluptatem. ipsum dolor sit amet consectetur, adipisicing elit. Corrupti, voluptas!
+                        Velit suscipit, totam fugit architecto quaerat dolorum sapiente harum ad.</p>
+                    <a href="#Servicios" class="btn btn-outline-secondary bt-lg mt-2">Read More</a>
                 </div>
                 <div class="center">
                     <div class="bgsize">
@@ -99,6 +107,48 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!--SCRIPT-->
+    <script>
+        window.sr = ScrollReveal();
+        sr.reveal(".navbar", {
+            duration: 3000,
+            origin: "button"
+        })
+        sr.reveal(".grid-2", {
+            duration: 2000,
+            origin: "top",
+            distance: "200px"
+        })
+        sr.reveal(".animacion", {
+            duration: 2000,
+            origin: "right",
+            distance: "200px"
+        })
+        sr.reveal(".heber-btn", {
+            duration: 2000,
+            origin: "button",
+            delay: 1000,
+        })
+        sr.reveal("colom-2", {
+            duration: 2000,
+            origin: "left",
+            delay: 1000,
+        })
+
+
+        //SMOOTH SCROLLING//
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

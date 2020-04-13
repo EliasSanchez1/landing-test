@@ -7,14 +7,32 @@
     <title>DataNet</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <!--GOOGLE FONTS-->
-    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,700&display=swap" rel="stylesheet">
     <!--CSS AWESOME-->
     <link rel="stylesheet" href="css/Style.css">
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--SCROLL REVEL-->
+    <script src=" https://unpkg.com/scrollreveal "></script>
 </head>
 
 <body>
-    <header>
+    <!--Navegacion-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#header">DATANET</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link active" href="#Servicios">Home</a>
+                <a class="nav-item nav-link" href="#">Features</a>
+            </div>
+        </div>
+    </nav>
+
+    <!--Contenido-->
+    <header id="header">
         <div class="header-content">
             <img src="imagen/LOGO2.jpg" alt="DataNet logo" class="logo">
             <h3 class="title">DataNet</h3>
@@ -43,9 +61,11 @@
         <div class="container text-center">
             <div class=" grid-2">
                 <div class="center">
-                    <i class="fas fa-code fa-10x"> </i>
+                    <div class="bgsize">
+                        <img src="imagen/Cableado-Estructurado.jpg" style="width: 80%;">
+                    </div>
                 </div>
-                <div>
+                <div id="Servicios">
                     <h3>Ubicacion</h3>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat unde tempore consectetur modi iste nemo!</p>
                 </div>
@@ -61,7 +81,9 @@
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti, voluptas! Velit suscipit, totam fugit architecto quaerat dolorum sapiente harum ad.</p>
                 </div>
                 <div class="center">
-                    <i class="fas fa-code fa-10x"> </i>
+                    <div class="bgsize">
+                        <img src="imagen/Control-acceso.jpg" style="width: 80%;">
+                    </div>
                 </div>
             </div>
     </section>
@@ -73,6 +95,10 @@
         <p>DataNet TI &copy; 2019 - all rights reserved;</p>
 
     </footer>
+    <!--BOOSTRA 4 SCRITP-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 
 </html>
